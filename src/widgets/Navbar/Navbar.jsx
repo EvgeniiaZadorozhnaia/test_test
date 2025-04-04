@@ -27,17 +27,17 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-5 bg-[#b9b7b7] shadow-md rounded-lg">
       {location.pathname === "/" && (
-        <button className="btn" onClick={() => navigate("/widgets")}>
+        <button className="btn border" onClick={() => navigate("/widgets")}>
           <FaEdit />
           Edit Dashboard
         </button>
       )}
       {location.pathname === "/widgets" && (
         <div className="flex gap-2">
-          <button className="btn" onClick={handleCancel}>
+          <button className="btn border-none" onClick={handleCancel}>
             Cancel
           </button>
-          <button className="btn" onClick={handleSave}>
+          <button className="btn border-none" onClick={handleSave}>
             Save Changes
           </button>
         </div>

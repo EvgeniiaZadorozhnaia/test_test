@@ -33,7 +33,6 @@ const WarningAlert = () => {
       </svg>
       <span className="ml-2">Внесите данные для изменения</span>
       <button
-        style={{ border: "none" }}
         onClick={() => setShowAlert(false)}
         className="top-1 right-2 text-lg text-black/50 hover:text-black">
         ✕

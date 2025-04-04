@@ -20,7 +20,7 @@ export default function Home() {
             <br />
             Click the button below to get started
           </div>
-          <button className="btn" onClick={() => navigate("/widgets")}>
+          <button className="btn border" onClick={() => navigate("/widgets")}>
             Edit Dashboard
           </button>
         </>

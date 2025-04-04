@@ -37,7 +37,7 @@ export default function Widget({ title }) {
     <div className={`${styles.widget} ${isAdded ? styles.added : ""}`}>
       <p>{title}</p>
       <button
-        className="btn btn-outline"
+        className="btn border border-blue-200"
         onClick={isAdded ? removeCard : addCard}>
         {isAdded ? "Remove" : "Add"}
       </button>
