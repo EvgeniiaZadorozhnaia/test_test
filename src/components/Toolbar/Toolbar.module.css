@@ -1,0 +1,36 @@
+.toolbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.layout {
+  width: 1200px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: #ff4d4d;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+
+}
+
+.card:hover .close {
+  opacity: 1;
+  visibility: visible;
+}

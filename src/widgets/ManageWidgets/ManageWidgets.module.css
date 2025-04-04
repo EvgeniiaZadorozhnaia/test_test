@@ -1,0 +1,14 @@
+.manage_widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 40px;
+  border-radius: 18px;
+}
+
+.widgets {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

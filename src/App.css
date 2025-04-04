@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+#root {
+  background-color: #ebe9e9;
+  display: flex;
+  flex-direction: column;
+}
