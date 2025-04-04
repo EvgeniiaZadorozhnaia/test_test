@@ -1,8 +1,20 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+:root {
+  --bg: #ebe9e9;
+  --second-bg: #eaf1f8;
+  --border: #abd2f1;
+  --gray: #cac8c8;
+}
+
 #root {
-  background-color: #ebe9e9;
+  background-color: var(--bg);
   display: flex;
   flex-direction: column;
+}
+
+button {
+  border: 1px solid var(--gray);
+  box-shadow: none;
 }

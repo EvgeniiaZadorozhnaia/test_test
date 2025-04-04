@@ -1,18 +1,20 @@
 import React, { useContext } from "react";
 import { FaEdit } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { LayoutContext } from "../../context/context";
+import WarningAlert from "../../components/Alert/Alert";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { layout } = useContext(LayoutContext);
+  const { layout, showAlert, setShowAlert } = useContext(LayoutContext);
 
   const handleSave = () => {
     if (layout.length > 0) {
       navigate("/");
+    } else {
+      setShowAlert(true);
     }
   };
 
@@ -40,6 +42,7 @@ export default function Navbar() {
           </button>
         </div>
       )}
+      {showAlert && <WarningAlert />}
 
       <div>LIQN</div>
     </nav>

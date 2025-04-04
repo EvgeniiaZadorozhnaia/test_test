@@ -1,0 +1,8 @@
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1000;
+}

@@ -1,7 +1,7 @@
 .widget {
   border-radius: 8px;
   padding: 10px;
-  border: 1px solid #abd2f1;
+  border: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,5 +9,5 @@
 }
 
 .added {
-  background-color: #eaf1f8;
+  background-color: var(--second-bg);
 }

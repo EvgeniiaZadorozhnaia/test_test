@@ -16,13 +16,14 @@ function App() {
     const stored = localStorage.getItem("grid-layout");
     return stored ? JSON.parse(stored) : [];
   });
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("grid-layout", JSON.stringify(layout));
   }, [layout]);
 
   return (
-    <LayoutContext.Provider value={{ layout, setLayout }}>
+    <LayoutContext.Provider value={{ layout, setLayout, showAlert, setShowAlert }}>
       <Router>
         <Navbar />
         <div className="max-w-[1200px] mx-auto mt-6 min-h-screen flex flex-col">
