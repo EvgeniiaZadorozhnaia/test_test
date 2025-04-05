@@ -3,7 +3,7 @@ import { LayoutContext } from "../../context/context";
 import styles from "./Alert.module.css";
 import "animate.css";
 
-const WarningAlert = () => {
+const WarningAlert = ({ text }) => {
   const { showAlert, setShowAlert } = useContext(LayoutContext);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const WarningAlert = () => {
           d="M12 9v2m0 4h.01m-6.938 4h13.856c1.054 0 1.502-1.276.732-2.012L13.732 4.988c-.77-.736-2.026-.736-2.796 0L4.35 16.988c-.77.736-.322 2.012.732 2.012z"
         />
       </svg>
-      <span className="ml-2">Внесите данные для изменения</span>
+      <span className="ml-2">{text}</span>
       <button
         onClick={() => setShowAlert(false)}
         className="top-1 right-2 text-lg text-black/50 hover:text-black">

@@ -1,10 +1,8 @@
-import React from 'react';
-import ManageWidgets from '../../widgets/ManageWidgets/ManageWidgets';
-import Toolbar from '../../components/Toolbar/Toolbar';
+import React from "react";
+import Toolbar from "../../components/Toolbar/Toolbar";
+import ManageWidgets from "../../components/ManageWidgets/ManageWidgets";
 
 export default function WidgetsPage() {
-
-
   return (
     <div>
       <ManageWidgets />
@@ -12,4 +10,3 @@ export default function WidgetsPage() {
     </div>
   );
 }
-

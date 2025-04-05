@@ -20,7 +20,7 @@ export default function Toolbar() {
       }))
     );
   };
-  
+
   const removeCard = (id) => {
     setLayout((prevLayout) => prevLayout.filter((item) => item.i !== id));
   };

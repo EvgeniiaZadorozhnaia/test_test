@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { FaEdit } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import { LayoutContext } from "../../context/context";
@@ -9,17 +9,31 @@ export default function Navbar() {
   const location = useLocation();
 
   const { layout, showAlert, setShowAlert } = useContext(LayoutContext);
+  const prevLayoutRef = useRef([]);
+
+  useEffect(() => {
+    if (location.pathname === "/widgets") {
+      const savedLayout = JSON.parse(
+        localStorage.getItem("grid-layout") || "[]"
+      );
+      prevLayoutRef.current = savedLayout;
+    }
+  }, []);
 
   const handleSave = () => {
-    if (layout.length > 0) {
+    const layoutChanged =
+      JSON.stringify(layout) !== JSON.stringify(prevLayoutRef.current);
+
+    if (layoutChanged) {
       navigate("/");
+      prevLayoutRef.current = layout;
     } else {
       setShowAlert(true);
     }
   };
 
   const handleCancel = () => {
-    localStorage.removeItem("layout");
+    localStorage.removeItem("grid-layout");
     layout.length = 0;
     navigate("/");
   };
@@ -42,7 +56,7 @@ export default function Navbar() {
           </button>
         </div>
       )}
-      {showAlert && <WarningAlert />}
+      {showAlert && <WarningAlert text="Enter data to change" />}
 
       <div>LIQN</div>
     </nav>

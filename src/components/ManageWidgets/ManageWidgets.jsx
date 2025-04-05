@@ -1,5 +1,5 @@
 import React from "react";
-import Widget from "../../components/Widget/Widget";
+import Widget from "../Widget/Widget";
 import styles from "./ManageWidgets.module.css";
 
 export default function ManageWidgets() {
